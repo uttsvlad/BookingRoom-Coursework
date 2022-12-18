@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CustomFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/allBidsAdminButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="250dp"
+            android:text="@string/textAllBidsAdminButton"
+            android:textAllCaps="false"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/allClientsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="250dp"
+            android:text="@string/textAllClientsButton"
+            android:textAllCaps="false"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/topServiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="250dp"
+            android:text="@string/topServiceTextButton"
+            android:textAllCaps="false"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+    </LinearLayout>
+</ScrollView>

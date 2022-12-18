@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="25dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="25dp"
+    android:paddingBottom="15dp">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/CustomImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/titleComplaint"
+            android:paddingStart="0dp"
+            android:paddingEnd="15dp"
+            android:src="@drawable/ic_statistic" />
+
+        <TextView
+            android:id="@+id/infoOne"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textTitleStatisticInfoOne"
+            android:textIsSelectable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleDateStart"
+        style="@style/CustomBody2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="12dp"
+        android:text="@string/textStatisticDateStart"
+        android:textSize="15sp"
+        app:drawableLeftCompat="@drawable/ic_date_start_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear" />
+
+    <TextView
+        android:id="@+id/selectStartDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/textSelectDateTextView"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/titleDateStart"
+        app:layout_constraintStart_toEndOf="@id/titleDateStart" />
+
+    <TextView
+        android:id="@+id/titleDateFinish"
+        style="@style/CustomBody2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:drawablePadding="5dp"
+        android:text="@string/textStatisticDateFinish"
+        android:textSize="15sp"
+        app:drawableLeftCompat="@drawable/ic_date_finish_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleDateStart" />
+
+    <TextView
+        android:id="@+id/selectFinishDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/textSelectDateTextView"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/titleDateFinish"
+        app:layout_constraintStart_toEndOf="@id/titleDateFinish" />
+
+    <TextView
+        android:id="@+id/titleAdmin"
+        style="@style/CustomBody2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:drawablePadding="5dp"
+        android:text="@string/textStatisticAdmin"
+        android:textSize="15sp"
+        app:drawableLeftCompat="@drawable/ic_admin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectFinishDateTextView" />
+
+    <Spinner
+        android:id="@+id/adminsSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleAdmin"
+        tools:listitem="@android:layout/simple_list_item_1" />
+
+    <TextView
+        android:id="@+id/titleAllCheckIn"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:paddingTop="15dp"
+        android:text="@string/all_check_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adminsSpinner" />
+
+    <TextView
+        android:id="@+id/allCheckInTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/titleAllCheckIn"
+        app:layout_constraintStart_toEndOf="@id/titleAllCheckIn"
+        tools:text="15" />
+
+    <TextView
+        android:id="@+id/titleLuxCount"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/lux_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleAllCheckIn" />
+
+    <TextView
+        android:id="@+id/luxCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/titleLuxCount"
+        app:layout_constraintStart_toEndOf="@id/titleLuxCount"
+        tools:text="15" />
+
+    <TextView
+        android:id="@+id/titleTotalRevenue"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/total_revenue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleLuxCount" />
+
+    <TextView
+        android:id="@+id/totalRevenueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/titleTotalRevenue"
+        app:layout_constraintStart_toEndOf="@id/titleTotalRevenue"
+        tools:text="15" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createStatisticButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:minWidth="250dp"
+        android:text="@string/textCreateStatisticButton"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

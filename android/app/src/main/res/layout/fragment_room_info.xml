@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?actionBarSize"
+        app:layout_constraintBottom_toTopOf="@id/bookRoomButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                app:fillColor="@color/darkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/titleInfoRoom"
+                style="@style/CustomTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="5dp"
+                android:textSize="20sp"
+                app:drawableLeftCompat="@drawable/ic_room_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carouselView"
+                tools:text="Номер Люкс - №101" />
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleInfoRoom"
+                tools:text="Самый лучший номер в нашей гостинице. Находится на первом этаже. Из окна можно наблюдать самый лучший вид в мире - Красная площадь - центр Москвы. " />
+
+            <TextView
+                android:id="@+id/titleCost"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textCostRoom"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_money_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
+
+            <TextView
+                android:id="@+id/costRoomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleCost"
+                app:layout_constraintStart_toEndOf="@id/titleCost"
+                tools:text="8500 рублей" />
+
+            <TextView
+                android:id="@+id/titleCapacity"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textCapacity"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_capacity_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleCost" />
+
+            <TextView
+                android:id="@+id/capacityRoomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleCapacity"
+                app:layout_constraintStart_toEndOf="@id/titleCapacity"
+                tools:text="4 человек" />
+
+            <TextView
+                android:id="@+id/titleFloor"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textFloor"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_floor_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleCapacity" />
+
+            <TextView
+                android:id="@+id/floorRoomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleFloor"
+                app:layout_constraintStart_toEndOf="@id/titleFloor"
+                tools:text="1 этаж" />
+
+            <TextView
+                android:id="@+id/titleWindowView"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textWindowView"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_window_view_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleFloor" />
+
+            <TextView
+                android:id="@+id/windowViewRoomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleWindowView"
+                app:layout_constraintStart_toEndOf="@id/titleWindowView"
+                tools:text="Охотный ряд" />
+
+            <TextView
+                android:id="@+id/titleConditioner"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textConditioner"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_conditioner_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleWindowView" />
+
+            <TextView
+                android:id="@+id/conditionerRoomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleConditioner"
+                app:layout_constraintStart_toEndOf="@id/titleConditioner"
+                tools:text="Да" />
+
+            <TextView
+                android:id="@+id/titleHairDrier"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textHairDrier"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_hair_drier"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleConditioner" />
+
+            <TextView
+                android:id="@+id/hairDrierRoomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleHairDrier"
+                app:layout_constraintStart_toEndOf="@id/titleHairDrier"
+                tools:text="Да" />
+
+            <TextView
+                android:id="@+id/titleBonus"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textBonus"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_bonus_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleHairDrier" />
+
+            <CheckBox
+                android:id="@+id/bonusOneCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:buttonTint="@color/blue"
+                android:text="@string/textOneBonusCheckBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleBonus" />
+
+            <CheckBox
+                android:id="@+id/bonusTwoCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:buttonTint="@color/blue"
+                android:text="@string/textTwoBonusCheckBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bonusOneCheckBox" />
+
+            <CheckBox
+                android:id="@+id/bonusThreeCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:buttonTint="@color/blue"
+                android:text="@string/textThreeBonusCheckBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bonusTwoCheckBox" />
+
+            <TextView
+                android:id="@+id/titlePayment"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textPayment"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_payment_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bonusThreeCheckBox" />
+
+            <RadioGroup
+                android:id="@+id/radioButtonGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titlePayment">
+
+                <RadioButton
+                    android:id="@+id/cashRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:buttonTint="@color/blue"
+                    android:checked="true"
+                    android:text="@string/textPaymentCashRadioButton" />
+
+                <RadioButton
+                    android:id="@+id/cardRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:buttonTint="@color/blue"
+                    android:text="@string/textPaymentCreditCashRadioButton" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/titleDateStart"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textDateStart"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_date_start_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioButtonGroup" />
+
+            <TextView
+                android:id="@+id/selectStartDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/textSelectDateTextView"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleDateStart"
+                app:layout_constraintStart_toEndOf="@id/titleDateStart" />
+
+            <TextView
+                android:id="@+id/titleDateFinish"
+                style="@style/CustomBody2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:drawablePadding="5dp"
+                android:text="@string/textDateFinish"
+                android:textSize="15sp"
+                app:drawableLeftCompat="@drawable/ic_date_finish_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleDateStart" />
+
+            <TextView
+                android:id="@+id/selectFinishDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/textSelectDateTextView"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/titleDateFinish"
+                app:layout_constraintStart_toEndOf="@id/titleDateFinish" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bookRoomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:minWidth="250dp"
+        android:text="@string/textBookRoomButton"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

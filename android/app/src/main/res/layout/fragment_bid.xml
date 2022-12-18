@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luolc.emojirain.EmojiRainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emojiContainer"
+    style="@style/CustomFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="200dp">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Обработка!" />
+
+        <ImageView
+            android:id="@+id/resultImageView"
+            style="@style/CustomImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/titleTreatmentOfBookedRoom"
+            android:src="@drawable/ic_alarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultTextView" />
+
+        <TextView
+            android:id="@+id/titleRoomId"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/textTitleRoomId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultImageView" />
+
+        <TextView
+            android:id="@+id/roomIdTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleRoomId"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="№105" />
+
+        <TextView
+            android:id="@+id/titleDateIn"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/textDateStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleRoomId" />
+
+        <TextView
+            android:id="@+id/dateInTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDateIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="26-06-2023" />
+
+        <TextView
+            android:id="@+id/titleDateOut"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/textDateFinish"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDateIn" />
+
+        <TextView
+            android:id="@+id/dateOutTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDateOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="26-06-2023" />
+
+        <TextView
+            android:id="@+id/titlePayment"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/textPayment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDateOut" />
+
+        <TextView
+            android:id="@+id/paymentTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titlePayment"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Банковская карта" />
+
+        <TextView
+            android:id="@+id/titleTotalPrice"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/textTitleTotalPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titlePayment" />
+
+        <TextView
+            android:id="@+id/totalPriceTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:text="@string/textTotalPriceTextView"
+            android:textAlignment="textEnd"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleTotalPrice"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/titleComment"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/textTitleComment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTotalPrice" />
+
+        <TextView
+            android:id="@+id/commentTextView"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:text="@string/textCommentTextView"
+            android:textAlignment="textEnd"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleComment"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/acceptButton"
+        style="@style/CustomImageButtonAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/background_shapes"
+        android:contentDescription="@string/titleTreatmentOfBookedRoom"
+        android:src="@drawable/ic_accept" />
+
+</com.luolc.emojirain.EmojiRainLayout>

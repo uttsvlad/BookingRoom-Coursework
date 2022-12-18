@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/CustomImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/titleComplaint"
+                android:paddingStart="0dp"
+                android:paddingEnd="5dp"
+                android:src="@drawable/ic_bit" />
+
+            <TextView
+                android:id="@+id/infoOne"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/textTitleBidMoneyAdminInfoOne"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/infoTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/textTitleTwoBidMoneyAdminInfoOne"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear" />
+
+        <TextView
+            android:id="@+id/titleInfoRoom"
+            style="@style/CustomTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="5dp"
+            android:textSize="20sp"
+            app:drawableLeftCompat="@drawable/ic_room_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoTwo"
+            tools:text="Номер Люкс - №101" />
+
+        <TextView
+            android:id="@+id/titleClient"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textTitleClient"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_person_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleInfoRoom" />
+
+        <TextView
+            android:id="@+id/clientTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleClient"
+            app:layout_constraintStart_toEndOf="@id/titleClient"
+            tools:text="Чекунков Александр Владимирович" />
+
+        <TextView
+            android:id="@+id/titlePayment"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textPayment"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_payment_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleClient" />
+
+        <TextView
+            android:id="@+id/paymentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titlePayment"
+            app:layout_constraintStart_toEndOf="@id/titlePayment"
+            tools:text="Банковская карта" />
+
+        <TextView
+            android:id="@+id/titleDateStart"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textDateStart"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_date_start_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titlePayment" />
+
+        <TextView
+            android:id="@+id/startDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDateStart"
+            app:layout_constraintStart_toEndOf="@id/titleDateStart"
+            tools:text="01 января 2022" />
+
+        <TextView
+            android:id="@+id/titleDateFinish"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textDateFinish"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_date_finish_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDateStart" />
+
+        <TextView
+            android:id="@+id/finishDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDateFinish"
+            app:layout_constraintStart_toEndOf="@id/titleDateFinish"
+            tools:text="01 января 2022" />
+
+        <TextView
+            android:id="@+id/titleCost"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textTitleTotalPrice"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_money_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDateFinish" />
+
+        <TextView
+            android:id="@+id/costRoomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleCost"
+            app:layout_constraintStart_toEndOf="@id/titleCost"
+            tools:text="8500 рублей" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/valueTextInputComment"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleCost"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <EditText
+                android:id="@+id/addMoneyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:hint="@string/textMoneyEditText"
+                android:inputType="number"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:minWidth="150dp"
+            android:text="@string/textSendButton"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/valueTextInputComment"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

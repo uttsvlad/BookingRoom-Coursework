@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="25dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="25dp"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/CustomImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/titleComplaint"
+            android:paddingStart="0dp"
+            android:paddingEnd="15dp"
+            android:src="@drawable/ic_bonus" />
+
+        <TextView
+            android:id="@+id/infoOne"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textTitleTopServiceInfo"
+            android:textIsSelectable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleNameTopService"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textNameTopService"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_name_top_service_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameTopService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleNameTopService"
+            app:layout_constraintStart_toEndOf="@id/titleNameTopService"
+            tools:text="Завтрак" />
+
+        <TextView
+            android:id="@+id/titleCostTopService"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textCostTopService"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_money_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleNameTopService" />
+
+        <TextView
+            android:id="@+id/costTopService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleCostTopService"
+            app:layout_constraintStart_toEndOf="@id/titleCostTopService"
+            tools:text="850 рублей" />
+
+        <TextView
+            android:id="@+id/titleCountTopService"
+            style="@style/CustomBody2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:text="@string/textCountTopService"
+            android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_count_top_service_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleCostTopService" />
+
+        <TextView
+            android:id="@+id/countTopService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleCountTopService"
+            app:layout_constraintStart_toEndOf="@id/titleCountTopService"
+            tools:text="15 раз" />
+
+        <ImageButton
+            android:id="@+id/okButton"
+            style="@style/CustomImageButtonAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/background_shapes"
+            android:contentDescription="@string/titleTreatmentOfBookedRoom"
+            android:src="@drawable/ic_accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

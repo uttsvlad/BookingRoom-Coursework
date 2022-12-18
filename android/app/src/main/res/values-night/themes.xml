@@ -1,0 +1,45 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.CourseWorkDataBase" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/darkBlue</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/darkBlue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomToolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">@color/blue</item>
+        <item name="colorOnPrimary">@color/grey</item>
+    </style>
+
+    <style name="CustomFragment" parent="Theme.CourseWorkDataBase">
+        <item name="android:background">@color/lightBlack</item>
+    </style>
+
+    <style name="CustomImageView" parent="Theme.CourseWorkDataBase">
+        <item name="android:tint">@color/darkGrey</item>
+    </style>
+
+    <style name="CustomImageButtonAccept" parent="Theme.CourseWorkDataBase">
+        <item name="android:tint">@color/lightBlack</item>
+    </style>
+
+    <style name="CustomImageViewList" parent="Theme.CourseWorkDataBase">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="CustomTitleTextView" parent="TextAppearance.AppCompat.Title">
+        <item name="drawableTint">@color/white</item>
+    </style>
+
+    <style name="CustomBody2TextView" parent="TextAppearance.AppCompat.Body2">
+        <item name="drawableTint">@color/white</item>
+    </style>
+</resources>

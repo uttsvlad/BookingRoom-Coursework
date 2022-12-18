@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/CustomImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/titleProfile"
+            android:paddingStart="0dp"
+            android:paddingEnd="15dp"
+            android:src="@drawable/ic_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleSurname"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/textTitleSurname"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/surnameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleSurname"
+            app:layout_constraintStart_toEndOf="@id/titleSurname"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Чекунков" />
+
+        <TextView
+            android:id="@+id/titleFirstname"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textTitleFirstName"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/titleSurname" />
+
+        <TextView
+            android:id="@+id/firstnameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleFirstname"
+            app:layout_constraintStart_toStartOf="@id/surnameTextView"
+            app:layout_constraintTop_toBottomOf="@id/surnameTextView"
+            tools:text="Александр" />
+
+        <TextView
+            android:id="@+id/titleMiddleName"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textTitleMiddleName"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/titleFirstname" />
+
+        <TextView
+            android:id="@+id/middleNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleMiddleName"
+            app:layout_constraintStart_toStartOf="@id/surnameTextView"
+            tools:text="Владимиирович" />
+
+        <TextView
+            android:id="@+id/titleRole"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textTitleRole"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/titleMiddleName" />
+
+        <TextView
+            android:id="@+id/roleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleRole"
+            app:layout_constraintStart_toStartOf="@id/surnameTextView"
+            tools:text="Администратор" />
+
+        <TextView
+            android:id="@+id/titleUsername"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/textTitleUsername"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleUsername"
+            app:layout_constraintStart_toEndOf="@id/titleUsername"
+            tools:text="alexandrChekunkov" />
+
+        <TextView
+            android:id="@+id/titleDocument"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/textTitleDocument"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleUsername" />
+
+        <TextView
+            android:id="@+id/documentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDocument"
+            app:layout_constraintStart_toEndOf="@id/titleDocument"
+            tools:text="Загранпаспорт" />
+
+        <TextView
+            android:id="@+id/titleDocumentID"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/textTitleDocumentID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDocument" />
+
+        <TextView
+            android:id="@+id/documentIDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDocumentID"
+            app:layout_constraintStart_toEndOf="@id/titleDocumentID"
+            tools:text="1815182677" />
+
+        <TextView
+            android:id="@+id/titleDateOfCreation"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/textTitleDateOfCreation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDocumentID" />
+
+        <TextView
+            android:id="@+id/dateOfCreationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/titleDateOfCreation"
+            app:layout_constraintStart_toEndOf="@id/titleDateOfCreation"
+            tools:text="17.10.2022 18:50:00" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:minWidth="150dp"
+            android:text="@string/textExitButton"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleDateOfCreation"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
