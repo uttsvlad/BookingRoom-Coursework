@@ -196,7 +196,7 @@ class StatisticFragment : Fragment(), HasCustomTitleMain {
                 isSelectedStartDate = true
                 binding.selectStartDateTextView.setTextColor(requireContext().getColor(R.color.blue))
 
-                val m = if (monthOfYear + 1 < 10) "0${monthOfYear + 1}" else mMonth.toString()
+                val m = if (monthOfYear + 1 < 10) "0${monthOfYear + 1}" else (monthOfYear + 1).toString()
                 val d = if (dayOfMonth < 10) "0${dayOfMonth}" else dayOfMonth.toString()
 
                 binding.selectStartDateTextView.text = "$year-$m-$d"
@@ -225,7 +225,7 @@ class StatisticFragment : Fragment(), HasCustomTitleMain {
                 isSelectedFinishDate = true
                 binding.selectFinishDateTextView.setTextColor(requireContext().getColor(R.color.blue))
 
-                val m = if (monthOfYear + 1 < 10) "0${monthOfYear + 1}" else mMonth.toString()
+                val m = if (monthOfYear + 1 < 10) "0${monthOfYear + 1}" else (monthOfYear + 1).toString()
                 val d = if (dayOfMonth < 10) "0${dayOfMonth}" else dayOfMonth.toString()
 
                 binding.selectFinishDateTextView.text = "$year-$m-$d"
