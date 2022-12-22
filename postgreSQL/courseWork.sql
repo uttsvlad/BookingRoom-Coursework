@@ -546,6 +546,7 @@ declare
     counter integer;
 BEGIN
     counter := 0;
+    SAVEPOINT my_savepoint;
     FOR c IN SELECT service_id FROM service
         LOOP
             INSERT INTO service_registration(service_id, registration_id) VALUES (c.service_id, reg_id);
@@ -554,7 +555,7 @@ BEGIN
     if counter = (select count(service_name) from service) then
         COMMIT;
     else
-        rollback;
+        rollback to savepoint my_savepoint;
     end if;
 END;
 $$;
